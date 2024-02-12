@@ -1,0 +1,38 @@
+---
+import { AstroSeo } from '@astrolib/seo';
+import type { Props as AstroSeoProps } from '@astrolib/seo';
+
+import { SITE, I18N } from '@/utils/config';
+import { getAsset } from '@/utils/permalinks';
+import type { MetaData } from '@/types';
+
+import { adaptOpenGraphImages } from '@/utils/images';
+
+const {
+  title,
+  description
+} = Astro.props as MetaData;
+
+const canonical = new URL(Astro.url.pathname, Astro.site).toString();
+const seoProps: AstroSeoProps = {
+  title: title,
+  titleTemplate: '%s',
+  canonical,
+  noindex: true,
+  nofollow: true,
+  description: description,
+  openGraph: {
+    url: canonical,
+    site_name: SITE?.name,
+    images: [],
+      locale: I18N?.language || 'en',
+      type: 'website',
+  }
+};
+---
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="sitemap" href={getAsset('/sitemap-index.xml')} />
+<AstroSeo {...{ ...seoProps, openGraph: await adaptOpenGraphImages(seoProps?.openGraph, Astro.site) }} />
