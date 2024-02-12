@@ -3,21 +3,23 @@
   <h4 align="center"><strong><code>Estella</code></strong> - A blog system based on Astro</h4>
 </p>
 
-<p align="center">
-  <a href="https://estella.vercel.app/" target="_blank"><code>Demo Live</code></a>
-  /
-  <a href="https://github.com/fifixc/estella#-contributing"><code>Contribute</code></a>
-</p>
+<h6 align="center">
+  <a href="https://github.com/fifixc/estella/blob/master/README.md">Introduction</a>
+  ·
+  <a href="https://github.com/fifixc/estella#-contributing">Contribute</a>
+  ·
+  <a href="https://estella.vercel.app/" target="_blank">Showcase</a>
+  ·
+  <a href="https://github.com/fifixc/estella/blob/master/docs">Docs</a>
+</h6>
 
 <p align="center">
-  <a href="https://github.com/fifixc/estella/issues">
-    <img src="https://img.shields.io/github/issues/fifixc/estella.svg?style=flat-square&label=Issues&color=FFE37E">
-  </a>
-  <a href="https://github.com/fifixc/fifixc/blob/main/LICENSE">
-    <img src="https://img.shields.io/badge/License-MIT-white.svg" alt="MIT LICENSE" />
-  </a>
-
-  <hr />
+	<a href="https://github.com/fifixc/estella/stargazers">
+		<img alt="Stargazers" src="https://img.shields.io/github/stars/fifixc/estella?style=for-the-badge&logo=githubsponsors&color=FFC8DD&logoColor=D9E0EE&labelColor=343349"></a>
+	<a href="https://github.com/fifixc/estella/blob/master/LICENSE">
+		<img alt="License" src="https://img.shields.io/github/license/fifixc/estella.svg?style=for-the-badge&logo=github&color=CDB4DB&logoColor=D9E0EE&labelColor=343349"/></a>
+	<a href="https://github.com/fifixc/estella/issues">
+		<img alt="Issues" src="https://img.shields.io/github/issues/fifixc/estella?style=for-the-badge&logo=gitbook&color=BDE0FE&logoColor=D9E0EE&labelColor=343349"></a>
 </p>
 
 [**`Estella`**](/) is a progressive web blog application, designed for publishing all kinds of articles aimed at providing assistance to those in need. Our web application boasts a variety of intriguing and remarkable features, and every day we strive to develop new original ideas.
