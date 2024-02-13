@@ -4,7 +4,7 @@
 </p>
 
 <h6 align="center">
-  <a href="https://github.com/fifixc/estella/blob/master/README.md">Introduction</a>
+  <a href="https://github.com/fifixc/estella#-introduction">Introduction</a>
   ·
   <a href="https://github.com/fifixc/estella#-contributing">Contribute</a>
   ·
@@ -21,6 +21,8 @@
 	<a href="https://github.com/fifixc/estella/issues">
 		<img alt="Issues" src="https://img.shields.io/github/issues/fifixc/estella?style=for-the-badge&logo=gitbook&color=BDE0FE&logoColor=D9E0EE&labelColor=343349"></a>
 </p>
+
+## ✨ Introduction
 
 [**`Estella`**](/) is a progressive web blog application, designed for publishing all kinds of articles aimed at providing assistance to those in need. Our web application boasts a variety of intriguing and remarkable features, and every day we strive to develop new original ideas.
 
