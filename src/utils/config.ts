@@ -5,33 +5,33 @@ export interface SiteConfig {
   trailingSlash?: boolean;
 }
 export interface I18NConfig {
-    language: string,
-    textDirection: string;
-    dateFormatter?: Intl.DateTimeFormat;
+  language: string;
+  textDirection: string;
+  dateFormatter?: Intl.DateTimeFormat;
 }
 
 export const getSite = () => {
-    return {
-        name: 'Estella',
-        site: 'https://estella.vercel.app',
-        base: '/',
-        trailingSlash: true,
-    } as SiteConfig;
+  return {
+    name: 'Estella',
+    site: 'https://estella.vercel.app',
+    base: '/',
+    trailingSlash: true,
+  } as SiteConfig;
 };
 const getI18N = () => {
-    const value = {
-        language: 'es',
-        textDirection: 'ltr',
-    };
+  const value = {
+    language: 'es',
+    textDirection: 'ltr',
+  };
 
-    return Object.assign(value, {
+  return Object.assign(value, {
     dateFormatter: new Intl.DateTimeFormat(value.language, {
-        year: 'numeric',
-        month: 'short',
-        day: 'numeric',
-        timeZone: 'UTC',
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+      timeZone: 'UTC',
     }),
-    }) as I18NConfig;
+  }) as I18NConfig;
 };
 
 export const SITE = getSite();
