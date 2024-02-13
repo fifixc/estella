@@ -9,7 +9,12 @@
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier --write .",
-    "lint:eslint": "eslint . --ext .js,.ts,.astro"
+    "lint:eslint": "eslint . --ext .js,.ts,.astro",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{js,ts}": "eslint --fix",
+    "*.{html,json}": "prettier --cache --write --plugin-search-dir=. ."
   },
   "dependencies": {
     "@astrojs/check": "^0.4.1",
@@ -29,6 +34,8 @@
     "astro-compress": "^2.2.9",
     "eslint": "^8.56.0",
     "eslint-plugin-astro": "^0.31.4",
+    "husky": "^9.0.10",
+    "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.13.0",
     "sharp": "^0.33.2",
