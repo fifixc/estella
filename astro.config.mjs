@@ -7,7 +7,7 @@ import sitemap from '@astrojs/sitemap';
 import compress from 'astro-compress';
 import mdx from '@astrojs/mdx';
 
-import { SITE } from '@/utils/config.ts';
+import { SITE } from './src/utils/config.ts';
 
 // https://astro.build/config
 export default defineConfig({
