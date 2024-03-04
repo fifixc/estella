@@ -1,9 +1,7 @@
 ---
 import '@/assets/styles/tailwind.css';
 
-import { I18N } from '@/utils/config';
-
-import Metadata from '@/components/common/Metadata.astro';
+import SEOTags from '@/components/seo/SEOTags.astro';
 
 import type { MetaData as MetaDataType } from '@/types';
 export interface Props {
@@ -11,15 +9,11 @@ export interface Props {
 }
 
 const { metadata = {} } = Astro.props;
-const { language, textDirection } = I18N;
 ---
 
 <!doctype html>
-<html lang={language} dir={textDirection}>
-  <head>
-    <Metadata {...metadata} />
-  </head>
-
+<html lang="en">
+  <SEOTags {...metadata} />
   <body class="antialiased max-w-2xl mb-40 flex flex-col md:flex-row mx-4 mt-8 lg:mx-auto">
     <slot />
     <style is:global>

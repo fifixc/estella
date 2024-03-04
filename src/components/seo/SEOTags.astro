@@ -1,0 +1,69 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import { SEO } from 'astro-seo';
+import { AstroFont } from 'astro-font';
+import { SITE } from '@/utils/config';
+import type { MetaData } from '@/types';
+
+type Props = MetaData;
+
+const { title, description, noindex, og } = Astro.props;
+
+const DEFAULT_TITLE_PAGE = 'Estella - Blog';
+const DEFAULT_DESCRIPTION_PAGE = 'A minimal blog template built with Astro!';
+const DEFAULT_URL_SITE = SITE.site;
+
+const openGraph = {
+  title: title || og?.title || DEFAULT_TITLE_PAGE,
+  type: og?.type || 'website',
+  image: og?.image || '/opengraph-image.jpg',
+  alt: og?.alt || 'Estella Blog Website',
+  url: DEFAULT_URL_SITE,
+  description: description || og?.description || DEFAULT_DESCRIPTION_PAGE,
+};
+---
+
+<head>
+  <SEO
+    charset="utf-8"
+    title={title || DEFAULT_TITLE_PAGE}
+    description={description || DEFAULT_DESCRIPTION_PAGE}
+    noindex={noindex || false}
+    openGraph={{
+      basic: openGraph,
+      image: {
+        alt: openGraph.alt,
+      },
+    }}
+    extend={{
+      link: [
+        { rel: 'icon', href: '/favicon.svg' },
+        { rel: 'sitemap', href: '/sitemap-index.xml' },
+      ],
+      meta: [
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { name: 'generator', content: Astro.generator },
+        { name: 'twitter:image', content: openGraph.image },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:title', content: openGraph.title },
+        { name: 'twitter:description', content: openGraph.description },
+        { name: 'twitter:site', content: '@estella' },
+      ],
+    }}
+  />
+  <AstroFont
+    config={[
+      {
+        src: [],
+        preload: false,
+        display: 'swap',
+        selector: 'html',
+        name: 'Open Sans',
+        fallback: 'sans-serif',
+        cssVariable: 'font-open-sans',
+        googleFontsURL: 'https://fonts.googleapis.com/css2?family=Open+Sans&display=swap',
+      },
+    ]}
+  />
+  <ViewTransitions />
+</head>
